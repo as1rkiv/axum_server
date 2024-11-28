@@ -1,0 +1,41 @@
+[server]
+host = "0.0.0.0"
+port = 3001
+domain = "192.168.50.114"
+protocol = "http"
+# tls_cert = ""
+# tls_key = ""
+static_dir = "static"
+
+[jwt]
+secret = "ITDagjdakd"
+expired = 864000
+
+[log]
+level = "info"      # trace|debug|info|warn|error
+max_files = 30
+rotation = "hourly" # never|daily|hourly|minutely
+
+[mysql]
+host = "127.0.0.1"
+port = 3306
+username = "axum_user"
+password = "axum_dev"
+database = "axum_srv"
+charset = "utf8mb4"
+collate = "utf8mb4_general_ci"
+max_connections = 75
+min_connections = 15
+acquire_timeout = 10
+
+[redis]
+host = "127.0.0.1"
+port = 6379
+username = ""
+password = "admin"
+
+[rabbitmq]
+host = "127.0.0.1"
+port = 5672
+username = "admin"
+password = "admin"
